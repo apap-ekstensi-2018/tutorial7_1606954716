@@ -8,14 +8,12 @@ public interface StudentService
 {
     StudentModel selectStudent (String npm);
 
-
     List<StudentModel> selectAllStudents ();
-
 
     void addStudent (StudentModel student);
 
-
     void deleteStudent (String npm);
 
-    void updateStudent(String npm, String name, double gpa);
+    void updateStudent(StudentModel student);
+
 }

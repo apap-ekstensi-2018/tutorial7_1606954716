@@ -49,9 +49,9 @@ public class StudentServiceDatabase implements StudentService
     }
 
     @Override
-    public void updateStudent(String npm, String nama, double gpa)
+    public void updateStudent(StudentModel student)
     {
-        log.info("Student " + npm + "updated");
-        studentMapper.updateStudent(npm, nama, gpa);
+        log.info("Student " + student.getNpm() + "updated");
+        studentMapper.updateStudent(student.getNpm(), student.getName(), student.getGpa());
     }
 }

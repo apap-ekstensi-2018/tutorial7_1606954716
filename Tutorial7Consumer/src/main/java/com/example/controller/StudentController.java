@@ -126,6 +126,7 @@ public class StudentController
             return "not-found";
         }
     }
+    /*
     @RequestMapping(value = "/student/update/submit", method = RequestMethod.POST)
     public String updateSubmit (@ModelAttribute("student") StudentModel student, ModelMap model)
     {
@@ -142,7 +143,6 @@ public class StudentController
             return "not-found";
         }
     }
-
     @RequestMapping(value = "/student/update/submit", method = RequestMethod.GET)
     public String updateSubmitGET (@ModelAttribute("student") StudentModel student, ModelMap model)
     {
@@ -159,4 +159,5 @@ public class StudentController
             return "not-found";
         }
     }
+    */
 }
