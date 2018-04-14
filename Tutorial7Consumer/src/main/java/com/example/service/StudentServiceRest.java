@@ -1,6 +1,7 @@
 package com.example.service;
 
 import com.example.dao.StudentDAO;
+import com.example.dao.StudentDAOImpl;
 import com.example.model.StudentModel;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ import java.util.List;
 @Primary
 public class StudentServiceRest implements  StudentService {
     @Autowired
-    private StudentDAO studentDAO;
+    private StudentDAOImpl studentDAO;
 
     @Override
     public StudentModel selectStudent (String npm)
@@ -26,7 +27,7 @@ public class StudentServiceRest implements  StudentService {
     public List<StudentModel> selectAllStudents ()
     {
         //log.info ("REST - select all students");
-        return null;
+        return studentDAO.selectAllStudents();
     }
 
     @Override

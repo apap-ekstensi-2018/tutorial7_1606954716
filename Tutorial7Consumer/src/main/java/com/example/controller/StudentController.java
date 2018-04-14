@@ -2,6 +2,7 @@ package com.example.controller;
 
 import java.util.List;
 
+import com.example.service.StudentServiceRest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +18,7 @@ import com.example.service.StudentService;
 public class StudentController
 {
     @Autowired
-    StudentService studentDAO;
+    StudentServiceRest studentDAO;
 
 
     @RequestMapping("/")
